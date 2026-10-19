@@ -9,6 +9,8 @@ rows.forEach((row) => {
   if (secondCell && lastCell) {
     const clonedCell = secondCell.cloneNode(true);
 
+    row.appendChild(clonedCell);
+
     row.insertBefore(clonedCell, lastCell);
   }
 });
