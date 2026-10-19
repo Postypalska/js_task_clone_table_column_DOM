@@ -1,3 +1,14 @@
 'use strict';
 
-// write your code here
+const rows = document.querySelectorAll('tr');
+
+rows.forEach((row) => {
+  const secondCell = row.children[1];
+  const lastCell = row.lastElementChild;
+
+  if (secondCell && lastCell) {
+    const clonedCell = secondCell.cloneNode(true);
+
+    row.insertBefore(clonedCell, lastCell);
+  }
+});
